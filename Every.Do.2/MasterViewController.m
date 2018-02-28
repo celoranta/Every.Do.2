@@ -63,12 +63,12 @@
 
 
 - (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    NewItemViewController *myNewItemViewController = (NewItemViewController *)  [self.storyboard instantiateViewControllerWithIdentifier:@"NewItemVC"];
+    myNewItemViewController.delegate = self;
+    
+    [self.navigationController presentViewController:myNewItemViewController animated:YES completion:nil];
+    
+    
 }
 
 
@@ -129,5 +129,14 @@
     }
 }
 
+#pragma mark - Add Delegate Protocol Method
+
+-(void)addToDo:(ToDo *)toDo
+{
+    [self.objects addObject:toDo];
+    [self.tableView reloadData];
+     
+     
+}
 
 @end

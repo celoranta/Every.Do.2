@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewItemViewController.h"
 
 @class DetailViewController;
 
-@interface MasterViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface MasterViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, AddToDoProtocol>
+
+
 
 
 
