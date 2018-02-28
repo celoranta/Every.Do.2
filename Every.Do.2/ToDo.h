@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIkit.h>
 
 @interface ToDo : NSObject
 
-@property (nonatomic) NSString* toDoTitle;
-@property (nonatomic) NSString* toDoDescription;
-@property (nonatomic) NSInteger toDoPriority;
+@property (nonatomic) NSString *toDoTitle;
+@property (nonatomic) NSString *toDoDescription;
+@property (nonatomic) int toDoPriority;
 @property (nonatomic) bool toDoIsComplete;
+@property (nonatomic) NSString *toDoPriorityString;
+
 
 @end

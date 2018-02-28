@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "ToDo.h"
-
+#import "CLETableViewCell.h"
 @interface MasterViewController ()
 
 @property (nonatomic) NSMutableArray *objects;
@@ -40,9 +40,10 @@
     for(int i = 0; i < 10; i++)
     {
     ToDo *newToDo = [[ToDo alloc]init];
-        newToDo.toDoTitle = @"<New ToDo";
-        newToDo.toDoDescription = @"It's a brand new day.  Get going!";
+        newToDo.toDoTitle = @"New To Do";
+        newToDo.toDoDescription = @"New To Do";
         newToDo.toDoPriority = i;
+        newToDo.toDoPriorityString = [NSString stringWithFormat:@"%d",newToDo.toDoPriority ];
         newToDo.toDoIsComplete = NO;
      [self.objects addObject:newToDo];
 
@@ -99,11 +100,16 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    CLETableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"toDoCell" forIndexPath:indexPath];
 
     // CLE update this to return each object (toDO object) from the object array, and set the labels equal to the values.
     ToDo *object = self.objects[indexPath.row];
-    cell.textLabel.text = object.toDoTitle;
+
+    cell.toDoCell.text =  object.toDoTitle ;
+    cell.toDoCellDescriptionLabel.text = object.toDoDescription;
+    int priority = object.toDoPriority;
+    cell.toDoCellPriorityLabel.text = [NSMutableString stringWithFormat:@"%d",priority];
+
     return cell;
 }
 

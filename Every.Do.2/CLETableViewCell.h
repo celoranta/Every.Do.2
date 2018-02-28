@@ -10,6 +10,10 @@
 
 @interface CLETableViewCell : UITableViewCell 
 
-@property (weak, nonatomic) IBOutlet UIView *cellTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toDoCell;
+@property (weak, nonatomic) IBOutlet UILabel *toDoCellDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toDoCellPriorityLabel;
+
+
 
 @end
