@@ -14,6 +14,8 @@
 		95C7DFE02046444B00AE4DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C7DFDF2046444B00AE4DD0 /* Assets.xcassets */; };
 		95C7DFE32046444B00AE4DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C7DFE12046444B00AE4DD0 /* LaunchScreen.storyboard */; };
 		95C7DFE62046444B00AE4DD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7DFE52046444B00AE4DD0 /* main.m */; };
+		95C7DFEE2046448B00AE4DD0 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7DFED2046448B00AE4DD0 /* ToDo.m */; };
+		95C7DFF120464B3D00AE4DD0 /* CLETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C7DFF020464B3D00AE4DD0 /* CLETableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		95C7DFE22046444B00AE4DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95C7DFE42046444B00AE4DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95C7DFE52046444B00AE4DD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95C7DFEC2046448B00AE4DD0 /* ToDo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		95C7DFED2046448B00AE4DD0 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		95C7DFEF20464B3D00AE4DD0 /* CLETableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLETableViewCell.h; sourceTree = "<group>"; };
+		95C7DFF020464B3D00AE4DD0 /* CLETableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLETableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,8 @@
 				95C7DFD42046444B00AE4DD0 /* AppDelegate.m */,
 				95C7DFD62046444B00AE4DD0 /* MasterViewController.h */,
 				95C7DFD72046444B00AE4DD0 /* MasterViewController.m */,
+				95C7DFEF20464B3D00AE4DD0 /* CLETableViewCell.h */,
+				95C7DFF020464B3D00AE4DD0 /* CLETableViewCell.m */,
 				95C7DFD92046444B00AE4DD0 /* DetailViewController.h */,
 				95C7DFDA2046444B00AE4DD0 /* DetailViewController.m */,
 				95C7DFDC2046444B00AE4DD0 /* Main.storyboard */,
@@ -72,6 +80,8 @@
 				95C7DFE12046444B00AE4DD0 /* LaunchScreen.storyboard */,
 				95C7DFE42046444B00AE4DD0 /* Info.plist */,
 				95C7DFE52046444B00AE4DD0 /* main.m */,
+				95C7DFEC2046448B00AE4DD0 /* ToDo.h */,
+				95C7DFED2046448B00AE4DD0 /* ToDo.m */,
 			);
 			path = Every.Do.2;
 			sourceTree = "<group>";
@@ -147,9 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C7DFEE2046448B00AE4DD0 /* ToDo.m in Sources */,
 				95C7DFD82046444B00AE4DD0 /* MasterViewController.m in Sources */,
 				95C7DFD52046444B00AE4DD0 /* AppDelegate.m in Sources */,
 				95C7DFE62046444B00AE4DD0 /* main.m in Sources */,
+				95C7DFF120464B3D00AE4DD0 /* CLETableViewCell.m in Sources */,
 				95C7DFDB2046444B00AE4DD0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

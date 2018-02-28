@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  CLETableViewCell.h
 //  Every.Do.2
 //
 //  Created by Chris Eloranta on 2018-02-27.
@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@interface CLETableViewCell : UITableViewCell 
 
-@interface MasterViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-
-
+@property (weak, nonatomic) IBOutlet UIView *cellTitleLabel;
 
 @end
-

@@ -8,10 +8,16 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "ToDo.h"
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property (nonatomic) NSMutableArray *objects;
+
+
+
+
+
 @end
 
 @implementation MasterViewController
@@ -19,14 +25,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // THE BELOW IS BOILERPLATE FROM TEMPLATE
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    // THE BELOW IS CHRIS'S CODE
+    
+    NSMutableArray *objects = [[NSMutableArray alloc]init];
+    self.objects = objects;
+    
+    for(int i = 0; i < 10; i++)
+    {
+    ToDo *newToDo = [[ToDo alloc]init];
+        newToDo.toDoTitle = @"<New ToDo";
+        newToDo.toDoDescription = @"It's a brand new day.  Get going!";
+        newToDo.toDoPriority = i;
+        newToDo.toDoIsComplete = NO;
+     [self.objects addObject:newToDo];
+
+    }
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    
 }
 
 
@@ -62,19 +87,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+    //OK.  One section sounds right.
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Sounds good:  number of rows in section is to equal toDo's in objects array
     return self.objects.count;
+    
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    // CLE update this to return each object (toDO object) from the object array, and set the labels equal to the values.
+    ToDo *object = self.objects[indexPath.row];
+    cell.textLabel.text = object.toDoTitle;
     return cell;
 }
 
